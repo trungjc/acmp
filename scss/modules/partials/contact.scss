@@ -1,0 +1,55 @@
+.other-info{
+	float:left;
+}
+.div-contact{
+	float:left;
+	background:$clr-body-text;
+	width:100%;
+	padding:55px 0;
+	.contact_in{
+		width:100%;
+		padding:0 20px;
+		max-width:1180px;
+		margin:0 auto;
+		> h4{
+			color:#fff;
+			margin:0;
+			padding:0 20px 35px;
+		}
+		.two-contact{
+			width:100%;
+			.col_contact{
+				width:50%;
+				padding:0 10px 0 20px;
+				float: left;
+				@include breakpoint($width-mobile-lg){
+					width:100%;
+				}
+			}
+		}
+	}
+}
+.line-contact{
+	margin-bottom:20px;
+	.lbl{
+		font-size:14px;
+		color:#fff;
+		margin:0 0 5px;
+		font-family: $f-roboto;
+		font-weight:bold;
+	}
+	.area_ct{
+		min-height: 136px;
+		padding:10px;
+		width:100%;
+		border-radius: 5px;
+		border: none;
+		font-family:$f-roboto;
+	}	
+}
+.p-submit{
+	width:100%;
+	float:left;
+	margin:0;
+	padding:0 20px;
+}

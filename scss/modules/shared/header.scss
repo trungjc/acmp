@@ -1,0 +1,243 @@
+.inner{
+    @include breakpoint($width-tablet){
+        padding:0 20px;
+    }
+    @include breakpoint($width-mobile-md){
+       // padding:0 10px;
+    }
+}
+.up_header{ 
+    padding-bottom:70px;
+    @include breakpoint($width-tablet){
+        padding-bottom:0px;
+        width:100%;
+        float:left;
+    }
+    .div_logo{
+        width:100%;
+        text-align: center;
+        padding-top:34px;
+        @include breakpoint($width-tablet){
+            float:left;
+            padding-top:20px;
+        }
+        @include breakpoint($width-mobile-md){
+            padding-top:20px;
+        }
+        .a_logo{        
+            > img{
+                width:125px;
+                margin: 0 auto;
+                @include breakpoint($width-screen-xsm){
+                    width:108px;
+                }
+                @include breakpoint($width-tablet){
+                    float:left;
+                }
+                &.logo_tab_up{
+                    @include breakpoint($width-tablet){
+                        display:none;
+                    }
+                }
+                &.logo_mobile{
+                    display: none;
+                    @include breakpoint($width-tablet){
+                        display:block;
+                    }
+                }
+            }
+        }
+        .download_report{
+            position:absolute;
+            bottom:170px;
+            width:100%;
+            text-align: center;
+            @include breakpoint($width-tablet){
+                position:relative;
+                float:right;
+                width:auto;
+                bottom:auto;
+            }
+        }
+    }
+}
+.ul_menu{
+    padding:0 20px;
+    overflow: hidden;
+    cursor: default!important;
+    @include breakpoint($width-tablet){
+        width:100%;
+        float:left;
+        margin-top:16px;
+        padding:0;
+    }
+    &.overshow{
+        overflow: auto;
+    }
+    > li{
+        display: block;
+        text-align: center;
+        margin: 0 0 15px;
+        font-weight:bold;
+        @include breakpoint($width-tablet){
+            display: inline-block;
+            float:left;
+            margin-right:89px;
+            &:last-child{
+                margin-right:0;
+            }
+        }
+        @include breakpoint($width-mobile-mlg){
+            margin-right:65px;
+        }
+        @include breakpoint($width-mobile-lg){
+            margin-right:45px;
+        }
+        @include breakpoint($width-mobile-md){
+            margin-right:48px;
+        }
+        @include breakpoint($width-mobile-lmd){
+            margin-right:39px;
+        }
+        @include breakpoint($width-mobile-smd){
+            margin-right:32px;
+        }
+        @include breakpoint($width-mobile-xmd){
+            margin-right:20px;
+        }
+        &.active{
+            color:$clr-theme-main;
+            > a{
+                color:$clr-theme-main;               
+            }
+        }
+        &.hasChild{
+            > a{
+                color:$clr-body-text;
+                &:hover{
+                    color:$clr-theme-main;
+                }
+            }
+            &.active{
+
+                .main-nav{
+                    .row-down{
+                        background:#fff url('../images/down.svg') no-repeat center top;
+                        @include breakpoint($width-tablet){
+                           height:11px;
+                           width:9px; 
+                           background-size: 9px;
+                           margin-top:-3px;
+                        }
+                        @include breakpoint($width-mobile-lg){
+                            background-size:7px auto;
+                            margin-top:2px;
+                        }
+                    }
+                }
+                .ul_child{
+                    display: block;
+                }
+            }
+            .main-nav{
+                position:relative;
+                .row-down{
+                    display: inline-block;
+                    width:15px;
+                    height:12px;
+                    margin-left:0;
+                    background:#fff url('../images/right.svg') no-repeat center bottom;
+                    background-size:contain;
+                    vertical-align: middle;
+                    position:absolute;
+                    right:-15px;
+                    top:50%;
+                    margin-top:-8px;
+                    @include breakpoint($width-tablet){
+                        width:11px;
+                        height:9px; 
+                        margin-top:-5px;
+                        right:0;  
+                        position:relative;
+                    }
+                    @include breakpoint($width-mobile-lg){
+                        background-size:6px auto;
+                        margin-left: 0;
+                        width:8px;
+                        height:8px;
+                        margin-top:-3px;
+                    }
+                }
+            }
+        }        
+        > a{
+            text-transform: uppercase;
+            font-weight:bold;
+            > span{
+                @include breakpoint($width-mobile-md){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.ul_child{
+    padding-top:20px;
+    padding-bottom:5px;
+    display: none;
+    @include breakpoint($width-tablet){
+        position:fixed;
+        width:100%;
+        left:0;
+        top:$top-tablet;
+        height: 100vh;
+        background:#fff;
+        z-index: 10;
+    }
+    @include breakpoint($width-mobile-lg){
+        top:$top-mobile-lg;
+    }
+    @include breakpoint($width-mobile-md){
+        top:$top-mobile-md;
+    }
+    > li{
+        display: block;
+        margin:0 0 15px;
+        &.active{
+            a{
+                color:$clr-theme-main;
+            }
+        }
+        &.close-li{
+            text-align: center;
+            display: none;
+             @include breakpoint($width-tablet){
+                display: block;
+             }
+        }
+        a{
+            font-family: $f-roboto;
+            font-weight:400;
+        }
+    }
+}
+
+.img-close{}
+.nicescroll-cursors{
+    opacity: 0.5;
+}
+
+.tab_menu_up{
+    @include breakpoint($width-tablet){
+        display: none;
+    }
+}
+.mobile_menu{
+    display: none;
+    @include breakpoint($width-tablet){
+        display: block;
+    }
+    .ul_child{
+        overflow: auto;
+    }
+}

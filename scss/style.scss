@@ -1,0 +1,61 @@
+// ----------------------------------------------------------------------
+// Base
+// ----------------------------------------------------------------------
+@import "base/variable";
+@import "base/mixin";
+@import "base/global";
+html,
+body {
+    font-family: $f-main, sans-serif;
+    font-size: $base-font-size;
+    color: $clr-body-text;
+    height: 100%;
+    @include breakpoint($width-screen-sm) {
+        font-size: $base-font-size-screen-sm;
+    }
+    @include breakpoint($width-tablet) {
+        font-size: $base-font-size-tablet;
+    }
+}
+
+body {
+    padding: 0;
+    font-family: $f-main, sans-serif;
+    @include font-size($font-size-body);
+    background-color: $body-bg;
+    @include breakpoint($width-tablet) {
+        @include font-size($font-size-body-tablet);
+    }
+}
+@import "modules/indexPage";
+@import "modules/shared/header";
+@import "modules/partials/listhome";
+@import "modules/partials/playvideo";
+@import "modules/partials/international";
+@import "modules/partials/value";
+@import "modules/partials/change";
+@import "modules/partials/about";
+@import "modules/partials/contact";
+.main-body {
+    position: relative;
+    z-index: 1;
+    background-color: $clr-white;
+}
+
+.container {
+    @include min-breakpoint($width-tablet + 1) {
+        width: auto;
+    }
+    @include min-breakpoint($width-screen-sm) {
+        width: auto;
+    }
+    @include min-breakpoint($width-screen-md) {
+        width: auto;
+    }
+    @include min-breakpoint($width-screen-lgpi) {
+        width: auto;
+    }
+}
+
+@import "modules/shared/footer";
+@import "modules/shared/ie9";

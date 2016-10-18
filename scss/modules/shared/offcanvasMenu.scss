@@ -1,0 +1,169 @@
+#page-menu {
+    opacity: 0;
+    background: $clr-menu-bg;
+    color: $clr-white;
+    text-transform: uppercase;
+}
+
+html.mm-opening,
+html.mm-opened {
+    #page-menu {
+        opacity: 1;
+    }
+}
+
+.mm-menu.mm-offcanvas.mm-top {
+    height: 100%;
+    max-height: none;
+}
+
+.mm-listview>li:not(.offcanvas-header) {
+    @include font-size(20);
+    color: #757476;
+    text-align: center;
+    font-weight: bold;
+    a {
+        display: inline-block;
+        position: relative;
+        overflow: visible;
+        color: $clr-white;
+        padding-left: 10px;
+        padding-right: 10px;
+        &:before {
+            content: '/';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            opacity: 0;
+            @include font-size(20);
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+        }
+        >span {
+            display: inline-block;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+    }
+    &:after {
+        display: none;
+    }
+    &:hover {
+        background: transparent;
+        a {
+            color: $clr-menu-hover;
+            &:before {
+                opacity: 1;
+            }
+            >span {
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+.mm-listview>li.offcanvas-header {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include breakpoint($width-tablet) {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    .container {
+        display: block;
+        padding: 0 15px;
+    }
+    .hamburger {
+        @include breakpoint($width-tablet) {
+            top: 10px;
+        }
+    }
+    &:after {
+        display: none;
+    }
+}
+
+html.mm-opened {
+    #offcanvas-hamburger {
+        border-radius: 50%;
+        background: $clr-menu-hover;
+        span {
+            &:nth-child(1) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+            &:nth-child(2) {
+                @include rotate(45deg, 1);
+                @include breakpoint($width-tablet) {
+                    top: 20px;
+                }
+            }
+            &:nth-child(3) {
+                @include rotate(-45deg, 4);
+                @include breakpoint($width-tablet) {
+                    top: 20px;
+                }
+            }
+            &:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+    }
+}
+
+.mm-listview>li>a,
+.mm-listview>li>span {
+    padding: 15px 10px 15px 20px
+}
+
+.mm-menu.mm-vertical .mm-listview>li.mm-opened>a.mm-next,
+.mm-menu.mm-vertical .mm-listview>li.mm-opened>.mm-panel,
+.mm-menu .mm-listview>li.mm-opened.mm-vertical>a.mm-next,
+.mm-menu .mm-listview>li.mm-opened.mm-vertical>.mm-panel {
+    background: $header-bg;
+}
+
+.mm-listview>li>a i,
+.mm-listview>li>span i {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    font-style: normal;
+    font-weight: normal;
+    @include font-size(18);
+}
+
+.mm-listview>li>a i.expanded,
+.mm-listview>li>span i.expanded {
+    display: none;
+}
+
+.mm-listview .mm-opened>span i {
+    display: none;
+}
+
+.mm-listview .mm-opened>span i.expanded {
+    display: inline;
+}
+
+.mm-listview .mm-next.mm-fullsubopen+a,
+.mm-listview .mm-next.mm-fullsubopen+span {
+    padding-right: 30px;
+}
+
+.mm-listview .mm-next::after {
+    display: none;
+}
+
+.mm-vertical .mm-listview .mm-panel,
+.mm-listview .mm-vertical .mm-panel {
+    padding-top: 0;
+}
+
+.mm-listview .mm-vertical .mm-panel .mm-listview li:last-child::after {
+    display: none;
+}

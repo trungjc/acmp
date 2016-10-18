@@ -1,0 +1,96 @@
+@charset "UTF-8";
+$width-mobile-sm: 320;
+$width-mobile-xmd: 359;
+$width-mobile-smd: 360;
+$width-mobile-lmd: 410;
+$width-mobile-md: 479;
+$width-mobile-lg: 599;
+$width-mobile-mlg: 660;
+$width-tablet: 767;
+$width-screen-sm: 992;
+$width-screen-xsm: 1023;
+$width-screen-lsm: 1024;
+$width-screen-md: 1199;
+$width-screen-mdpi: 1249;
+$width-screen-lg: 1366;
+$width-screen-lgpi: 1400;
+$width-screen-lgxl: 1600;
+$width-screen-lgxxl: 1921;
+$base-font-size: 16px;
+$base-font-size-screen-sm: 16px;
+$base-font-size-tablet: 16px;
+$font-size-body: 14;
+$font-size-body-tablet: 14;
+$title:35;
+$title-screen-sm:25;
+$title-tablet:20;
+$title-phone:18;
+
+$clr-theme-main: #be1622;/*#b10014;*/
+$clr-body-text: #262626;/*1c1c1c*/
+$top-tablet:105px;
+$top-mobile-lg:98px;
+$top-mobile-md:103px;
+
+$clr-txt-border: #fff;
+$clr-txt-placeholder: #7f8182;
+$clr-txt-bg: #efefef;
+$clr-white: #fff;
+$clr-black: #000;
+$clr-form-error: #b94a48;
+$clr-form-success: #287444;
+$clr-txt-label: #898989;
+$clr-faq:#909090;
+$opacity:0.55;
+$va:3.6px;
+$va2:0.5px;
+$va3:1.5px;
+$lh-blog:1.1em;
+$bg-date:#023361;
+$clr-orange: #ef7d00;
+$clr-orange-dark: #d17520;
+$header-bg: #51595c;
+$body-bg: #fff;
+$dark-grey: #4f5761;
+$dark-white: #e4e5e6;
+$green: #287444;
+$dark: #1e1e1e;
+$clr-menu-bg: #24272c;
+$clr-menu-hover: #0091dc;
+$f-main: 'ITC';
+$f-roboto: 'Roboto Slab';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700';
+@font-face {
+  font-family: 'ITC';
+  src: url('../fonts/AvantGarde-Book.eot');
+  src: url('../fonts/AvantGarde-Book.woff') format('woff'),
+       url('../fonts/AvantGarde-Book.ttf') format('truetype'),
+       url('../fonts/AvantGarde-Book.svg#AvantGarde-Book') format('svg'),
+       url('../fonts/AvantGarde-Book.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ITC';
+  src: url('../fonts/AvantGarde-Bold.eot');
+  src: url('../fonts/AvantGarde-Bold.woff') format('woff'),
+       url('../fonts/AvantGarde-Bold.ttf') format('truetype'),
+       url('../fonts/AvantGarde-Bold.svg#AvantGarde-Bold') format('svg'),
+       url('../fonts/AvantGarde-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+// @font-face {
+//     font-family: 'ITC';
+//     src: url('../fonts/ITCAvantGardeGothic-Medium2.eot');
+//     src: url('../fonts/ITCAvantGardeGothic-Medium2.woff') format('woff'),
+//         url('../fonts/ITCAvantGardeGothic-Medium2.ttf') format('truetype'),
+//         url('../fonts/ITCAvantGardeGothic-Medium2.svg#ITCAvantGardeGothic-Medium2') format('svg'),
+//        url('../fonts/ITCAvantGardeGothic-Medium2.eot?#iefix') format('embedded-opentype');
+//     font-weight: bold;
+//     font-style: normal;
+// }

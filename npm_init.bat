@@ -1,0 +1,1 @@
+npm install gulp gulp-jshint gulp-sass gulp-sourcemaps gulp-minify-css gulp-concat gulp-uglify gulp-rename tiny-lr browser-sync --save-dev

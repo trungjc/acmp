@@ -1,0 +1,5 @@
+- open terminal
+- "npm install" to initial project
+- "gulp" to start develope
+- modify url configs in gulpfile.js file
+- modify php config paths in: /public/views/shared/header-meta.php

@@ -1,0 +1,789 @@
+body{
+    color:$clr-body-text;
+}
+a {
+    color: $clr-body-text;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+        color: $clr-theme-main;
+        text-decoration: none;
+    }
+    &.nolink {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &.underline-hover {
+        &:hover {
+            text-decoration: none;
+            >span {
+                border-bottom: solid 1px $clr-body-text;
+            }
+        }
+    }
+}
+
+a.nolink {
+    &:hover,
+    &:visited,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+a:focus,
+button {
+    outline: none;
+}
+
+textarea {
+    font-family: $f-main, sans-serif;
+    @include font-size($font-size-body);
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.text-left-xs {
+    @include breakpoint($width-tablet) {
+        text-align: left;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-width-height {
+    width: 100%;
+    height: 100%;
+}
+
+.full-width-xs {
+    @include breakpoint($width-tablet) {
+        width: 100%;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+}
+
+//margin-bottom standard
+.mb-s {
+    margin-bottom: 15px;
+    @include breakpoint($width-tablet) {
+        margin-bottom: 10px;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.f-light {
+    font-weight: 300;
+}
+
+.f-regular {
+    font-weight: normal;
+}
+
+.f-medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.display-none {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $f-roboto;
+}
+
+h1,
+h2,
+h3 {
+    // font-weight: bold;
+}
+h1{
+    font-size: 32px;
+    @include breakpoint($width-mobile-lg){
+        font-size:14px;
+    }
+}
+h2{
+    font-size: 72px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:52px;
+    }
+}
+h3{
+    font-size: 20px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:16px;
+    }
+}
+h4{
+    font-size: 30px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:20px;
+    }
+}
+h5{
+    font-size: 16.8px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:14px;
+    }
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+/*form elements*/
+
+.btn-default {
+    border-radius: 0;
+    color: $clr-white;
+    text-align: center;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus,
+    &:active:hover {
+        color: $clr-white;
+    }
+    &.active {
+        color: $clr-white;
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:active:hover {
+            background-color: $clr-white;
+            color: $clr-body-text;
+        }
+    }
+}
+
+.btn-success {
+    padding: 14px 10px;
+    color: $clr-body-text;
+    background-color: $clr-white;
+    border: 0;
+    border-radius: 0;
+    transition: background-color .3s ease-out;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus,
+    &:active:hover {
+        background-color: darken($clr-white, 15);
+        color: $clr-body-text;
+    }
+    &.active {
+        background-color: darken($clr-white, 15);
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:active:hover {
+            background-color: darken($clr-white, 15);
+            color: $clr-white;
+        }
+    }
+}
+
+.btn-primary {
+    padding: 14px 20px;
+    color: $clr-white;
+    background-color: $clr-menu-hover;
+    border: 0;
+    border-radius: 0;
+    transition: background-color .3s ease-out;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus,
+    &:active:hover {
+        background-color: darken($clr-menu-hover, 15);
+        color: $clr-white;
+    }
+    &.active {
+        background-color: darken($clr-menu-hover, 15);
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:active:hover {
+            background-color: darken($clr-menu-hover, 15);
+            color: $clr-white;
+        }
+    }
+}
+
+.btn-info {
+    padding: 14px 20px;
+    color: $clr-menu-hover;
+    background-color: transparent;
+    border: solid 3px $clr-menu-hover;
+    border-radius: 0;
+    transition: background-color .3s ease-out;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus,
+    &:active:hover {
+        background-color: $clr-menu-hover;
+        color: $clr-white;
+        border-color: $clr-menu-hover;
+    }
+    &.active {
+        background-color: $clr-menu-hover;
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:active:hover {
+            background-color: $clr-menu-hover;
+            color: $clr-white;
+        }
+    }
+}
+
+.form-control {
+    border-radius: 0;
+    background: transparent;
+    border: solid 3px $clr-txt-border;
+    outline: none;
+    box-shadow: none;
+    @include placeholder-color($clr-txt-placeholder);
+    &:focus {
+        box-shadow: none !important;
+        border-color: $clr-txt-border;
+    }
+}
+
+.input-group {
+    border-radius: 0;
+    background: transparent;
+    border: solid 3px $clr-txt-border;
+    .input-group-addon {
+        border-radius: 0;
+        border: 0;
+        background: transparent;
+    }
+    .form-control {
+        padding-left: 0;
+        border: 0;
+    }
+}
+
+.form-group {
+    .form-error {
+        display: none;
+    }
+    &.has-error {
+        .input-group {
+            border-color: $clr-form-error;
+        }
+        .input-group-addon {
+            color: inherit;
+        }
+    }
+    &.has-success {
+        .input-group,
+        .form-control {
+            border-color: $clr-txt-border;
+        }
+        .input-group-addon {
+            color: inherit;
+        }
+    }
+}
+
+form.validate {
+    .form-error-result {
+        display: none;
+        text-align: left;
+        color: $clr-form-error;
+    }
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba($clr-black, 0.4);
+}
+
+.background-cover {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+
+/* loading */
+
+.loadding-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 24;
+    padding-left:247px;
+    background:none;
+    @include breakpoint($width-screen-mdpi){
+        padding-left:155px;
+    }
+    @include breakpoint($width-tablet){
+        padding-left:0;
+    }
+    .inners {
+        height:100%;
+        width:100%;
+        background-color: rgba($clr-black, 1);
+        position:relative;
+        
+        
+    }
+}
+
+// body.modal-open.loading {
+//     .loadding-box {
+//         display: block;
+//         z-index: 999;
+//     }
+//     &.pre-loading {
+//         .loadding-box {
+//            // background-color: rgba($clr-black, 0.90);
+//         }
+//     }
+// }
+
+
+/* end */
+
+
+/*bootstrap-select*/
+
+.dropdown-toggle.btn-default {
+    border: solid 3px $clr-txt-border;
+}
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default:active.focus,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open>.dropdown-toggle.btn-default.focus,
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:hover,
+.btn-default.active,
+.btn-default:active,
+.open>.dropdown-toggle.btn-default {
+    color: inherit;
+    border-color: $clr-txt-border;
+    background-color: transparent;
+}
+
+.bootstrap-select .dropdown-menu {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 4px;
+    border: 0;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li {
+    border-top: solid 1px $clr-menu-bg;
+    a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        &:hover {
+            background-color: #E2E4E5;
+        }
+    }
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.bootstrap-select {
+    >.dropdown-toggle {
+        background: transparent;
+        box-shadow: none;
+        &:focus,
+        &:active,
+        &:hover {
+            outline: 0!important;
+            outline-offset: 0;
+            color: inherit;
+        }
+    }
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+    @include rounded(0);
+    box-shadow: none;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    text-align: center;
+}
+
+.error .bootstrap-select .dropdown-toggle,
+.has-error .bootstrap-select .dropdown-toggle {
+    border-color: $clr-form-error;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    border: 0;
+    width: 22px;
+    height: 13px;
+    top: 35%;
+    &:before {
+        display: inline-block;
+        font-family: "captovate-motobike" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\44";
+        color: $clr-white;
+    }
+}
+
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+    &:before {
+        transform: rotate(180deg);
+    }
+}
+
+
+/*end bootstrap-select*/
+
+.display-table {
+    display: table;
+    .cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.visiable-none {
+    visibility: hidden;
+}
+
+.vertical-center {
+    @include vertical-center();
+}
+
+
+/* carousel */
+
+.h-carousel,
+.h-carousel-one-slide {
+    .slick-prev,
+    .slick-next {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $clr-menu-bg;
+        color: $clr-white;
+        opacity: 0.2;
+        transition: opacity 0.3s ease;
+        @include breakpoint($width-tablet) {
+            display: none !important;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &.slick-disabled {
+            &:hover {
+                opacity: 0.2;
+            }
+        }
+    }
+    .slick-prev {
+        left: -47px;
+        transform: rotate(180deg);
+    }
+    .slick-next {
+        right: -47px;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: "captovate-motobike" !important;
+        font-style: normal !important;
+        font-weight: normal !important;
+        font-variant: normal !important;
+        text-transform: none !important;
+        speak: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\62";
+        @include font-size(17);
+        opacity: 1;
+    }
+}
+
+.h-carousel-one-slide {
+    .slick-prev {
+        left: 47px;
+        opacity: 1;
+    }
+    .slick-next {
+        right: 47px;
+        opacity: 1;
+    }
+}
+
+
+/* end carousel */
+.pph-1{
+    font-size:24px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:18px;
+    }
+    @include breakpoint($width-tablet){
+        font-size:14px;
+    }
+
+    
+}
+.pph-2{
+    font-size:18px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:14px;
+    }
+}
+.main-nav{
+    font-size:14px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:14px;
+    }
+    @include breakpoint($width-mobile-lg){
+        font-size:12px;
+    }
+    
+}
+.sub-nav{
+    font-size:14px;
+    @include breakpoint($width-screen-mdpi){ // max-width 1249px;
+        font-size:12px;
+    }
+}
+.btn-am{
+    font-size:14px;
+    font-family: $f-roboto;
+    font-weight:bold;
+    display: inline-block;
+    @include breakpoint($width-screen-mdpi){
+        font-size:12px;
+    }
+}
+
+// .pph-1{
+//     font-size:18.5pt;
+//     @include breakpoint($width-screen-mdpi){
+//         font-size:14pt;
+//     }
+//     @include breakpoint($width-mobile-lg){
+//         font-size:12pt;
+//     }
+
+    
+// }
+// .pph-2{
+//     font-size:14.05pt;
+//     @include breakpoint($width-screen-mdpi){
+//         font-size:14pt;
+//     }
+// }
+.pph-3{
+    font-size:20px;
+    @include breakpoint($width-screen-mdpi){
+        font-size:16px;
+    }
+}
+/*// .main-nav{
+//     font-size:12pt;
+//     @include breakpoint($width-screen-mdpi){
+//          font-size:10pt;
+//     }
+// }
+// .sub-nav{
+//     font-size:9.35pt;
+//     @include breakpoint($width-screen-mdpi){
+//         font-size:8.5pt;
+//     }
+// }
+// .btn-am{
+//     font-size:12pt;
+//     font-family: $f-roboto;
+//     font-weight:bold;
+//     @include breakpoint($width-screen-mdpi){
+//          font-size:10pt;
+//     }
+// }*/
+.btn-download{
+    height:45px;
+    border:2px solid $clr-theme-main;
+    border-radius:5px;
+    background:#fff;
+    line-height: 41px;
+    padding:0 28px 0 26px;
+    color:$clr-theme-main;
+    transition: all 0.3s ease-in-out;
+    @include breakpoint($width-screen-lgxl){
+        padding:0 10px;
+        font-size:11pt;
+    }
+    @include breakpoint($width-screen-xsm){
+        height:38px;
+        line-height: 34px;
+    }
+    &:hover{
+        background:#a90019;
+        color:#fff;
+    }
+    @include breakpoint($width-tablet){
+        padding:0 9px 0 7px;
+        height:30px;
+        line-height:26px;
+        font-size:12px;
+    }
+}
+.btn-now{
+    height:45px;
+    border:2px solid #fff;
+    border-radius:5px;
+    background:none;
+    line-height: 41px;
+    padding:0 26px 0 26px;
+    color:#fff;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background:#fff;
+        /*color:#005094;*/
+        color:$clr-theme-main;
+    }
+    @include breakpoint($width-tablet){
+        padding:0 16px 0 16px;
+    }
+}
+.btn-start,.btn-submit{
+    height:45px;
+    border-radius:5px;
+    border:none;
+    background:#fff;
+    line-height: 41px;
+    padding:0 26px 0 26px;
+    min-width:180px;
+    color:$clr-theme-main;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background:#a90019;
+        color:#fff;
+    }
+    @include breakpoint($width-screen-mdpi){
+        min-width:110px;
+    }
+    @include breakpoint($width-screen-xsm){
+        height:28px;
+        line-height: 28px;
+    }
+    @include breakpoint($width-tablet){
+        padding:0 18px 0 16px;
+    }
+}
+.btn-submit{
+    background:$clr-theme-main;
+    color:#fff;
+    font-family:$f-roboto;
+    font-weight:bold;
+    &:hover{
+        background:#fff;
+        color:$clr-theme-main;
+    }
+}
+.mobile-only{
+    display: none;
+    @include breakpoint($width-tablet){
+        display: block;
+    }
+}
+.tablet-up{
+    @include breakpoint($width-tablet){
+        display: none;
+    }
+}
+.tablet-only{
+    display: none;
+    @include breakpoint($width-screen-xsm){
+        display: block;
+    }
+}
+.input_ct{
+    width:100%;
+    height:45px;
+    background:#fff;
+    line-height: 45px;
+    padding:0 10px;
+    border: none;
+    border-radius: 5px;
+}

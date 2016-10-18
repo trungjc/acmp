@@ -1,0 +1,75 @@
+body{overflow-x:hidden;}
+#page-content-wrapper{
+    position: relative;
+    #header{
+        position:fixed;
+        width:247px;
+        border-right:1px solid #edeceb;
+        height: 100vh;
+        background:#fff url('../images/bg/bg_menu.png') no-repeat center bottom;
+        background-size:212px;
+        z-index: 2;
+        @include breakpoint($width-screen-mdpi){
+            width:174px;
+            background-size:174px;
+        }
+        @include breakpoint($width-tablet){
+            width:100%;
+            background-image:none;
+            position:fixed;
+            height:auto;
+            float:left;
+            z-index: 23;
+        }
+    }
+    
+}
+.main-ampc{
+    width:100%;
+    padding-left:247px;
+    /*overflow: hidden;*/
+    @include breakpoint($width-screen-mdpi){
+        padding-left:174px;
+    }
+    @include breakpoint($width-tablet){
+        padding-left:0;
+        float:left;
+        padding-top:$top-tablet;
+    }
+    @include breakpoint($top-mobile-lg){
+        padding-top:$top-mobile-lg;
+    }
+    @include breakpoint($width-mobile-md){
+        padding-top:$top-mobile-md;
+    }
+}
+.fullHeight{
+    min-height:870px;
+    @include breakpoint($width-screen-mdpi){
+        min-height:768px;
+    }
+    @include breakpoint($width-screen-mdpi){
+        min-height:0;
+    }
+}
+#canvas {
+position:absolute;
+margin:auto;
+left:0;right:0;
+top:0;bottom:0;
+}
+.showsubmenu{
+    overflow: hidden;
+}
+.desktop-up{
+    display: block;
+    @include breakpoint($width-screen-lgpi){
+        display: none;
+    }
+}
+.tablet-only{
+    display: none;
+    @include breakpoint($width-screen-lgpi){
+        display: block;
+    }
+}
