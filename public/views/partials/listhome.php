@@ -81,7 +81,7 @@ $rootVideo = $root . "assets/src/converted/";
 				<h3>Climate<br/>change</h3>
 			</div>
 		</a>
-		<a href="where-to-next.php?vid=186214910" data-video-id="186214910" class="list-item third-item" style="background-image:url(<?php echo $rootimg;?>bg/8.jpg)">
+		<a href="where-to-from-here.php?vid=186214910" data-video-id="186214910" class="list-item third-item" style="background-image:url(<?php echo $rootimg;?>bg/8.jpg)">
 			<video width="100%" >
 				<source src="<?php echo $rootVideo;?>video8.mp4" type="video/mp4">
 				Your browser does not support HTML5 video.
