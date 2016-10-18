@@ -258,7 +258,7 @@ endif;
 						<a href="http://www.ampc.com.au/" class="btn-start btn-am">Go to our website</a>
 					</p>
 					<p class="p_getintouch">
-						<a href="tel:02 8908 5500" title="tel:02 8908 5500" class="btn-start btn-am">Call us</a>
+						<a href="tel:02 8908 5500" title="tel:02 8908 5500" class="btn-start btn-am">Call 02 8908 5500</a>
 					</p>
 					<p class="p_getintouch">
 						<a href="#" class="btn-start btn-am" id="getintouch">Email us</a>
