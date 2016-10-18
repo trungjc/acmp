@@ -151,7 +151,7 @@
 	</div>
 	<div class="other-info">
 		<div class="sub-info">
-			<a href="changing-consumption-patterns.php?vid=186214896" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/4.jpg)">
+			<a href="changing-consumption-patterns" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/4.jpg)">
 				<div class="mask"></div>
 				<div class="txt_inner">
 					<p class="pph-1">Watch the next video:</p>

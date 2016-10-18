@@ -156,7 +156,7 @@
 	
 	<div class="other-info">
 		<div class="sub-info">
-			<a href="climate-change.php?vid=186214898" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/7.jpg)">
+			<a href="climate-change" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/7.jpg)">
 				<div class="mask"></div>
 				<div class="txt_inner">
 					<p class="pph-1">Watch the next video:</p>

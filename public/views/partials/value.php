@@ -59,7 +59,7 @@
 	</div>
 	<div class="other-info">
 		<div class="sub-info">
-			<a href="social-licence-to-operate.php?vid=186214897" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/6.jpg)">
+			<a href="social-licence-to-operate" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/6.jpg)">
 				<div class="mask"></div>
 				<div class="txt_inner">
 					<p class="pph-1">Watch the next video:</p>

@@ -108,7 +108,7 @@
 	</div>
 	<div class="other-info">
 		<div class="sub-info">
-			<a href="where-to-next.php?vid=186214910"data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/8.jpg)">
+			<a href="where-to-from-here"data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/8.jpg)">
 				<div class="mask"></div>
 				<div class="txt_inner">
 					<p class="pph-1">Watch the next video:</p>

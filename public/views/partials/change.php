@@ -108,7 +108,7 @@
 	</div>
 	<div class="other-info">
 		<div class="sub-info">
-			<a href="value-chain-integration.php?vid=186214895" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/5.jpg)">
+			<a href="value-chain-integration" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/5.jpg)">
 				<div class="mask"></div>
 				<div class="txt_inner">
 					<p class="pph-1">Watch the next video:</p>

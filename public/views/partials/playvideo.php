@@ -5,7 +5,7 @@ $clickable="";
 
 switch($vid) {
 	case '185581200':
-		$vidn = 'international-competition.php?vid=186214894';
+		$vidn = 'international-competition';
 	 	
 		break;
 	case '186214910':

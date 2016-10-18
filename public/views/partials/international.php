@@ -202,7 +202,7 @@
 	</div> -->
 	<div class="other-info">
 		<div class="sub-info">
-			<a href="regulatory-environment.php?vid=186214893" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/3.jpg)">
+			<a href="regulatory-environment.php" data-video-id="ePbKGoIGAXY" class="list-item" style="background-image:url(<?php echo $rootimg ?>bg/3.jpg)">
 				<div class="mask"></div>
 				<div class="txt_inner">
 					<p class="pph-1">Watch the next video:</p>
