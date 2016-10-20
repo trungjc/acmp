@@ -2,3 +2,4 @@
 public/assets/js/*.*
 public/assets/css/*.*
 ftpconfig.js
+node_modules/
